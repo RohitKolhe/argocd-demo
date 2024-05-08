@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  # Adpat to your needs
+  name: argocd-demo
+  namespace: argocd
+spec:
+  source:
+    # Customize according to your requirements
+    targetRevision: main
+    helm:
+      valueFiles:
+        - values-development.yaml

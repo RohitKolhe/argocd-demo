@@ -1,0 +1,12 @@
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    # Customize according to your requirements
+    namespace: webapp-dev
+  # Customize according to your requirements
+  source:
+    repoURL: https://github.com/RohitKolhe/argocd-demo
+    targetRevision: main
+    environment: dev
+    valueFile: values-development.yaml
+

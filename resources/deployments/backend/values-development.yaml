@@ -1,0 +1,7 @@
+spec:
+  destination:
+    namespace: local # will be overwritten
+  mongodb:
+    image_tag: 4.4.3
+  service:
+    url: '<serviceURL>'

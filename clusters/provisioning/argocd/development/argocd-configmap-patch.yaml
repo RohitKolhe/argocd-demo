@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+data:
+  # customize to your repo azure dev ops
+  repositories: |
+    - url: https://github.com/RohitKolhe/argocd-demo.git
+  # customize to your repo azure dev ops and create secret in argocd namespace
+  repository.credentials: |
+    - url: https://github.com/RohitKolhe/argocd-demo.git
+      passwordSecret:
+        name: dev-ops-token
+        key: password
+      usernameSecret:
+        name: dev-ops-token
+        key: username
